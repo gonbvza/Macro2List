@@ -26,12 +26,14 @@ keywords_to_remove = {
 
 
 def read_csv(path: str):
+    """Read and clean a CSV file, returning rows without headers or unwanted entries."""
     with open(path, newline="", encoding="utf-8") as csvfile:
         spamreader = csv.reader(csvfile, delimiter=";", quotechar="|")
         return clean_csv(spamreader)
 
 
 def clean_csv(spamreader):
+    """Clean CSV rows by removing empty lines and unwanted keywords."""
     clean_rows = []
     for row in spamreader:
         line = ";".join(row)

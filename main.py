@@ -24,8 +24,7 @@ from pathlib import Path
 from src import read_csv
 from src.csv_to_hash import csv_to_hash, pretty_print_hash
 from src.list_prices import add_prices
-from src.scrapper.scrap import scrap, scrap_products
-from src.scrapper.translate import translate
+from src.scrapper import scrap, scrap_products, translate
 
 
 def main():

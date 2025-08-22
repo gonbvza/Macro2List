@@ -1,8 +1,13 @@
 def csv_to_hash(clean_rows):
+    """
+    Convert a list of CSV rows into a nutrition dictionary.
+
+    Each row should be: [item, weight(g), calories, protein, carbs, fat].
+    Accumulates values if an item appears multiple times.
+    """
     items = {}
 
     for row in clean_rows:
-        # expected format: [item, weight(g), calories, protein, carbs, fat]
         if len(row) < 6:
             continue  # skip malformed rows
 
@@ -36,6 +41,11 @@ def csv_to_hash(clean_rows):
 
 
 def pretty_print_hash(nutrition_hash):
+    """
+    Print a nutrition dictionary in a neatly aligned table.
+
+    Columns: Item, Weight(g), Calories, Protein, Carbs, Fat.
+    """
     print(
         f"{'Item':<20} {'Weight(g)':>10} {'Calories':>10} {'Protein':>10} {'Carbs':>10} {'Fat':>10}"
     )

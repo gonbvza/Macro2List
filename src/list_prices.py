@@ -1,15 +1,17 @@
 import json
 import math
 
-from src.utils.weight_utils import convert_to_grams
+from src.utils import convert_to_grams
 
 
 def calculate_from_grams(price, weight):
+    """Calculate how many units are needed based on weight in grams."""
     price_amount = convert_to_grams(price["qty"])
     return weight / price_amount
 
 
 def get_product_by_name(name, products_prices):
+    """Return the product dict from the list matching the given name (case-insensitive)."""
     for product in products_prices:
         if product["name"].lower() == name.lower():
             return product
@@ -17,6 +19,10 @@ def get_product_by_name(name, products_prices):
 
 
 def add_prices(shopping_list):
+    """
+    Calculate needed quantities and total prices for a shopping list.
+    Writes a neatly aligned summary to 'list.txt'.
+    """
     with open("./translated.txt", "r") as file:
         products_prices = [json.loads(line.strip()) for line in file]
 
