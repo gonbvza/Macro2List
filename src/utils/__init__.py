@@ -1,1 +1,1 @@
-from weight_utils import *
+from src.utils.weight_utils import *
