@@ -46,7 +46,7 @@ The workflow is:
 
 - Handles specific phrases and saves translated products to a file.
 
-Main Script (shopping_list.py)
+`shopping_list.py`:
 
 - Reads the CSV nutrition plan.
 
