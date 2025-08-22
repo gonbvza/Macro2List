@@ -42,19 +42,19 @@ The workflow is:
 
 4. ### Translation
 
-translate.py uses GoogleTranslator to translate product names from Dutch to English.
+`translate.py` uses GoogleTranslator to translate product names from Dutch to English.
 
-Handles specific phrases and saves translated products to a file.
+- Handles specific phrases and saves translated products to a file.
 
-Main Script (shopping_list.py)
+`shopping_list.py`:
 
-Reads the CSV nutrition plan.
+- Reads the CSV nutrition plan.
 
-Generates a nutrition hash.
+- Generates a nutrition hash.
 
-Runs scraping and translation of products.
+- Runs scraping and translation of products.
 
-Calculates and prints the shopping list with required quantities and total prices.
+- Calculates and prints the shopping list with required quantities and total prices.
 
 5. ### Output
 
